@@ -1,0 +1,514 @@
+/* =====================================================
+   MK PORTFOLIO V2.0
+   COMPONENTS.CSS
+===================================================== */
+
+@import url("variables.css");
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:1000;
+
+    padding:20px 0;
+
+    transition:.4s;
+
+}
+
+.header.scrolled{
+
+    padding:14px 0;
+
+}
+
+.navbar{
+
+    width:90%;
+    max-width:1320px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 32px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:50px;
+
+}
+
+.logo{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    font-family:var(--font-heading);
+
+    color:white;
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:36px;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    font-weight:500;
+
+    color:var(--text-secondary);
+
+}
+
+.nav-links a:hover{
+
+    color:white;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+    left:0;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--gradient-primary);
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+.resume-btn{
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:var(--gradient-primary);
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.hero-left{
+
+    max-width:650px;
+
+}
+
+.hero-tag{
+
+    color:var(--primary);
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.hero-title{
+
+    margin-bottom:20px;
+
+}
+
+.hero-subtitle{
+
+    font-size:1.35rem;
+
+    color:var(--primary);
+
+    min-height:40px;
+
+    margin-bottom:25px;
+
+}
+
+.hero-description{
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.social-links{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:40px;
+
+}
+
+.social-links a{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+.social-links a:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-8px);
+
+}
+
+/* =====================================================
+   PROFILE CARD
+===================================================== */
+
+.profile-card{
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:35px;
+
+}
+
+.status-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#14F195;
+
+    box-shadow:0 0 20px #14F195;
+
+}
+
+.status h4{
+
+    font-size:1rem;
+
+}
+
+.status p{
+
+    font-size:.85rem;
+
+    color:var(--text-muted);
+
+}
+
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
+
+.profile-wrapper{
+
+    position:relative;
+
+    width:300px;
+
+    height:300px;
+
+    margin:auto;
+
+}
+
+.profile-image{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:4px solid rgba(34,211,238,.5);
+
+    box-shadow:var(--shadow-glow);
+
+}
+
+.profile-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center 20%;
+
+}
+
+/* =====================================================
+   TECH BADGES
+===================================================== */
+
+.tech-badge{
+
+    position:absolute;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+.tech-badge i{
+
+    font-size:1.2rem;
+
+}
+
+.tech-html{top:0;left:-30px;}
+.tech-css{top:60px;right:-25px;}
+.tech-js{right:-40px;bottom:110px;}
+.tech-python{left:-45px;bottom:110px;}
+.tech-ai{bottom:10px;left:20px;}
+.tech-git{bottom:20px;right:20px;}
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    margin-top:40px;
+
+}
+
+.stat{
+
+    padding:20px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+.stat:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+}
+
+.stat h3{
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+}
+
+.stat p{
+
+    font-size:.85rem;
+
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+}
+
+/* =====================================================
+   SECTION GRID
+===================================================== */
+
+.cards-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    padding:60px 0;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+}
+
+.footer p{
+
+    color:var(--text-muted);
+
+}
