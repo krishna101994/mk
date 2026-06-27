@@ -237,9 +237,15 @@
 
 }
 
-.hero-subtitle{
+.hero-subtitle::after{
 
-    animation:fadeUp 1.2s ease;
+    content:"|";
+
+    margin-left:5px;
+
+    animation:blink .8s infinite;
+
+    color:var(--primary);
 
 }
 
